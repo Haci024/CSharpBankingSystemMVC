@@ -1,0 +1,32 @@
+﻿@model MoneyTransferProject.ViewModels.HomeVM
+@inject LanguageService  language
+<div class="site-section cta-big-image" id="about-section">
+    <div class="container">
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-8 text-center">
+                <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">@language.GetKey(Model.AboutUs.Title)</h2>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+                <figure class="circle-bg">
+                    <img src="~/images/@Model.AboutUs.Image" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                </figure>
+            </div>
+            <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+
+                <h3 class="text-black mb-4">@language.GetKey(Model.AboutUs.Subtitle)</h3>
+
+                <p>
+                    @language.GetKey(Model.AboutUs.Description)
+
+
+               
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+</div>

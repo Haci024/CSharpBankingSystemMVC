@@ -1,0 +1,508 @@
+﻿@{
+    Layout = null;
+}
+@inject LanguageService language
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+<link rel="stylesheet" href="fonts/icomoon/style.css">
+<meta charset="UTF-8">
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
+<meta name="apple-mobile-web-app-title" content="CodePen">
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
+
+<title>Odissey Banks</title>
+<link rel="canonical" href="https://codepen.io/thecoderelite/pen/WNpwEXx">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;display=swap" rel="stylesheet">
+<title>Odissey Banks</title>
+<script>
+    window.console = window.console || function (t) { };
+</script>
+<style>
+    body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #007bff;
+    }
+    h1{
+        padding-right:200px;
+        margin-top:800px;
+    }
+    h2 {
+        display: block;
+        padding-left: 60px;
+        margin-top: 700px;
+        padding-bottom:60px;
+        font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    a {
+        display: block;
+        font-size: 35px;
+        text-decoration: none;
+        color:blue;
+    }
+    .container {
+        padding-top: 300px;
+        height: auto;
+        width: 700px;
+        border-radius: 20px;
+        padding: 20px;
+        margin: 50px 0;
+
+        background-image: linear-gradient(to bottom left, #e4dfec, white, white);
+    }
+
+    .sub-container {
+      padding-top:50px;
+        display: flex;
+        width: 100%;
+        gap: 50px;
+        height: max-content;
+    }
+
+  
+
+    .header {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0px;
+    }
+
+        .header button {
+            height: max-content;
+            width: max-content;
+            padding: 10px;
+            border: none;
+            background-color: transparent;
+            font-size: 35px;
+            color: #9088d2;
+        }
+
+            .header button:hover {
+                cursor: pointer;
+            }
+
+    .view,
+    .breakup {
+        width: 50%;
+    }
+
+    .details input {
+        width: 100%;
+    }
+
+    .detail {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    /*----- Styling the sliders ----*/
+    input[type="range"] {
+        -webkit-appearance: none;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        input[type="range"]:focus {
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: #9088d2;
+            border-radius: 10px;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            box-shadow: 2px 2px 5px #b3b3b3, -1px -1px 3px grey;
+            border: 5px solid #ffffff;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #9088d2;
+            cursor: pointer;
+            margin-top: -6px;
+            -webkit-appearance: none;
+        }
+
+        input[type="range"]:focus::-webkit-slider-runnable-track {
+            background: #b3b3b3;
+        }
+
+        input[type="range"]::-moz-range-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: #9088d2;
+            border-color: transparent;
+            border-width: 16px 0;
+            color: transparent;
+            border-radius: 10px;
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            box-shadow: 2px 2px 5px #b3b3b3, -1px -1px 3px grey;
+            border: 5px solid #ffffff;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #9088d2;
+            cursor: pointer;
+            margin-top: -6px;
+        }
+
+        input[type="range"]::-ms-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: #9088d2;
+            border-color: transparent;
+            border-width: 16px 0;
+            color: transparent;
+            border-radius: 10px;
+        }
+
+        input[type="range"]::-ms-fill-lower {
+            background: #9088d2;
+            border-radius: 5px;
+        }
+
+        input[type="range"]::-ms-fill-upper {
+            background: #9088d2;
+            border-radius: 5px;
+        }
+
+        input[type="range"]::-ms-thumb {
+            box-shadow: 2px 2px 5px #b3b3b3, -1px -1px 3px grey;
+            border: 5px solid #ffffff;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background: #9088d2;
+            cursor: pointer;
+            margin-top: -6px;
+        }
+
+        input[type="range"]:focus::-ms-fill-lower {
+            background: #9088d2;
+        }
+
+        input[type="range"]:focus::-ms-fill-upper {
+            background: #9088d2;
+        }
+
+    /*-------------------------------------*/
+    #price {
+        color: #130f31;
+        font-size: 25px;
+    }
+
+    .loan-details {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+
+    #price-container {
+        color: #9088d2;
+        margin-top: 50px;
+    }
+
+        #price-container::before {
+            content: "@language.GetKey("Aylıq ödəniş"):";
+            font-size: 12px;
+            display: block;
+        }
+</style>
+
+
+
+
+<div class="container">
+  
+    <div class="header">
+
+        <h2 class="mb-0 site-logo"><a asp-controller="Home" asp-action="Index" class="h2 mb-0">Odissey </a></h2>
+        <h1 style="color: darkred">@language.GetKey("Kredit Kalkulyatoru")</h1>
+
+    </div>
+    <div class="sub-container">
+        <div class="view">
+            <div class="details">
+                <div>
+                    <div class="detail">
+                        <p style="color: #9088D2">@language.GetKey("Kredit məbləği")</p>
+                        <p id="loan-amt-text" style="color: #6258A8"> @language.GetKey("Azn")</p>
+                    </div>
+                    <input type="range" id="loan-amount" min="0" max="1000000" step="500">
+                </div>
+                <div>
+                    <div class="detail">
+                        <p style="color: #9088D2">@language.GetKey("Kredit müddəti")</p>
+                        <p id="loan-period-text" style="color: #6258A8">12 @language.GetKey("il")</p>
+                    </div>
+                    <input type="range" id="loan-period" min="1" max="30" step="1">
+                </div>
+                <div>
+                    <div class="detail">
+                        <p style="color: #9088D2">% @language.GetKey("Kredit faizi")</p>
+                        <p id="interest-rate-text" style="color: #6258A8">8%</p>
+                    </div>
+                    <input type="range" id="interest-rate" min="1" max="25" step="1">
+                </div>
+            </div>
+            <div class="footer">
+                <p id="price-container"><span id="price">46,246.251 @language.GetKey("Azn")</span>/@language.GetKey("Aylıq")</p>
+            </div>
+        </div>
+        <div class="breakup">
+            <canvas id="pieChart" width="406" height="406" style="display: block; box-sizing: border-box; height: 325px; width: 325px;"></canvas>
+        </div>
+    </div>
+    <div>
+        <div class="loan-details">
+            <div class="chart-details">
+                <p style="color: #9088D2">@language.GetKey("Kredit məbləği")</p>
+                <p id="cp" style="color: #130F31; font-size: 17px;"></p>
+            </div>
+            <div class="chart-details">
+                <p style="color: #9088D2">@language.GetKey("Əlavə ödəniş")</p>
+                <p id="ci" style="color: #130F31; font-size: 17px;">Azn</p>
+            </div>
+            <div class="chart-details">
+                <p style="color: #9088D2"> @language.GetKey("Ümumi ödəniş")</p>
+                <p id="ct" style="color: #130F31; font-size: 17px;">Azn</p>
+            </div>
+        </div>
+        <canvas id="lineChart" height="875" width="875" style="display: block; box-sizing: border-box; height: 700px; width: 700px;"></canvas>
+    </div>
+</div>
+<script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.2.0/chart.min.js"></script>
+<script id="rendered-js">
+    var P, R, N, pie, line;
+    var loan_amt_slider = document.getElementById("loan-amount");
+    var int_rate_slider = document.getElementById("interest-rate");
+    var loan_period_slider = document.getElementById("loan-period");
+    var illik = '@language.GetKey("illik")';
+    var name = '@language.GetKey("İllik ödəniş məbləği")';
+  
+    // update loan amount
+    loan_amt_slider.addEventListener("input", self => {
+        document.querySelector("#loan-amt-text").innerText =
+            parseInt(self.target.value).toLocaleString("en-US") + " Azn";
+        P = parseFloat(self.target.value);
+        displayDetails();
+    });
+
+    // update Rate of Interest
+    int_rate_slider.addEventListener("input", self => {
+        document.querySelector("#interest-rate-text").innerText =
+            self.target.value + "%";
+        R = parseFloat(self.target.value);
+        displayDetails();
+    });
+
+    // update loan period
+    loan_period_slider.addEventListener("input", self => {
+        document.querySelector("#loan-period-text").innerText =
+            self.target.value + '@language.GetKey("illik")';
+        N = parseFloat(self.target.value);
+        displayDetails();
+    });
+    console.log(name)
+    // calculate total Interest payable
+    function calculateLoanDetails(p, r, emi) {
+        /*
+              p: principal
+              r: rate of interest
+              emi: monthly emi
+        */
+        let totalInterest = 0;
+        let yearlyInterest = [];
+        let yearPrincipal = [];
+        let years = [];
+        let year = 1;
+        let [counter, principal, interes] = [0, 0, 0];
+        while (p > 0) {
+            if (window.CP.shouldStopExecution(0)) break;
+            let interest = parseFloat(p) * parseFloat(r);
+            p = parseFloat(p) - (parseFloat(emi) - interest);
+            totalInterest += interest;
+            principal += parseFloat(emi) - interest;
+            interes += interest;
+            if (++counter == 12) {
+                years.push(year++);
+                yearlyInterest.push(parseInt(interes));
+                yearPrincipal.push(parseInt(principal));
+                counter = 0;
+            }
+        } window.CP.exitedLoop(0);
+        line.data.datasets[0].data = yearPrincipal;
+        line.data.datasets[1].data = yearlyInterest;
+        line.data.labels = years;
+        return totalInterest;
+    }
+
+    // calculate details
+    function displayDetails() {
+        let r = parseFloat(R) / 1200;
+        let n = parseFloat(N) * 12;
+
+        let num = parseFloat(P) * r * Math.pow(1 + r, n);
+        let denom = Math.pow(1 + r, n) - 1;
+        let emi = parseFloat(num) / parseFloat(denom);
+
+        let payabaleInterest = calculateLoanDetails(P, r, emi);
+
+        let opts = '{style: "decimal", currency: "US"}';
+
+        document.querySelector("#cp").innerText =
+            parseFloat(P).toLocaleString("en-US", opts) + " Azn";
+
+        document.querySelector("#ci").innerText =
+            parseFloat(payabaleInterest).toLocaleString("en-US", opts) + " Azn";
+
+        document.querySelector("#ct").innerText =
+            parseFloat(parseFloat(P) + parseFloat(payabaleInterest)).toLocaleString(
+                "en-US",
+                opts) +
+            " Azn";
+
+        document.querySelector("#price").innerText =
+            parseFloat(emi).toLocaleString("en-US", opts) + " Azn";
+
+        pie.data.datasets[0].data[0] = P;
+        pie.data.datasets[0].data[1] = payabaleInterest;
+        pie.update();
+        line.update();
+    }
+
+    // Initialize everything
+    function initialize() {
+        document.querySelector("#loan-amt-text").innerText =
+            parseInt(loan_amt_slider.value).toLocaleString("en-US") + " Azn";
+        P = parseFloat(document.getElementById("loan-amount").value);
+
+        document.querySelector("#interest-rate-text").innerText =
+            int_rate_slider.value + "%";
+        R = parseFloat(document.getElementById("interest-rate").value);
+
+        document.querySelector("#loan-period-text").innerText =
+            loan_period_slider.value + " @language.GetKey("il")";
+        N = parseFloat(document.getElementById("loan-period").value);
+
+        line = new Chart(document.getElementById("lineChart"), {
+            data: {
+                datasets: [
+                    {
+                        type: "line",
+                        label: name,
+                        borderColor: "rgb(54, 162, 235)",
+                        data: []
+                    },
+
+                    {
+                        type: "line",
+                        label: '@language.GetKey("İllik əlavə ödəniş məbləği")',
+                        borderColor: "rgb(255, 99, 132)",
+                        data: []
+                    }],
+
+
+                labels: []
+            },
+
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: "@language.GetKey("Yearly Payment Breakdown")"
+                    }
+                },
+
+
+                scales: {
+                    x: {
+                        title: {
+                            color: "grey",
+                            display: true,
+                            text: "@language.GetKey("illər")"
+                        }
+                    },
+
+
+                    y: {
+                        title: {
+                            color: "grey",
+                            display: true,
+                            text: '@language.GetKey("İllik ödəniş"),@language.GetKey("Azn")'
+                        }
+                    }
+                }
+            }
+        });
+
+
+
+
+
+
+        pie = new Chart(document.getElementById("pieChart"), {
+            type: "doughnut",
+            data: {
+                labels: ["Kredit məbləği","Əlavə ödəniş"],
+                datasets: [
+                    {
+                        label: "Home Loan Details",
+                        data: [0, 0],
+                        backgroundColor: ["rgb(54, 162, 235)", "rgb(255, 99, 132)"],
+                        hoverOffset: 4
+                    }]
+            },
+
+
+
+            options: {
+                plugins: {
+                    title: {
+                        display: true,
+                        text: "@language.GetKey("Ödəniş Diaqramı")"
+                    }
+                }
+            }
+        });
+
+
+
+
+        displayDetails();
+    }
+    initialize();
+//# sourceURL=pen.js
+</script>
+
+
+
+
+

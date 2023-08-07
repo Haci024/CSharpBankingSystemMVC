@@ -1,0 +1,124 @@
+﻿@model ConfirmCodeViewModel
+@{
+	
+	Layout = null;
+}
+<!DOCTYPE html>
+<html>
+
+<!-- Head -->
+<head>
+
+	<title>Money Transfer</title>
+
+	<!-- Meta-Tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="keywords" content="Existing Login Form Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design">
+	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //Meta-Tags -->
+
+	<link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+
+	<!-- Style -->
+	<link rel="stylesheet" href="~/register/css/style.css" type="text/css" media="all">
+
+	<!-- Fonts -->
+	<link href="//fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+	<!-- //Fonts -->
+
+</head>
+<!-- //Head -->
+<!-- Body -->
+<body>
+
+	<h1>Email təsdiqləmə səhifəsi</h1>
+
+	<div class="w3layoutscontaineragileits">
+		
+		<br />
+		<form method="post">
+			<br />
+			<input type="email" asp-for="Email" value="@ViewBag.Mail"><br />
+			<label style="color:white">Mailinizə gələn kodu daxil edin...</label><br /><br />
+			<input type="text" asp-for="ConfirmCode" placeholder="">
+			@if (!ViewData.ModelState.IsValid)
+			{
+				<div class="alert alert-danger">
+					@foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+					{
+						<span>@error.ErrorMessage</span>
+
+						<br />
+					}
+				</div>
+			}<br />
+			<ul class="agileinfotickwthree">
+	<br />
+				<span class="text-danger" id="countdown"></span>
+
+				<a asp-controller="Account" asp-action="ResendConfirmationEmail">Yeni təsdiq şifrəsi göndər</a>
+			</ul>
+			<div class="aitssendbuttonw3ls">
+				<input type="submit" value="Göndər!">
+
+				<div class="clear"></div>
+			</div>
+		
+
+		</form>
+	</div>
+
+
+
+
+
+
+
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+	<!-- pop-up-box-js-file -->
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<!--//pop-up-box-js-file -->
+	<script>
+		$(document).ready(function () {
+			$('.w3_play_icon,.w3_play_icon1,.w3_play_icon2').magnificPopup({
+				type: 'inline',
+				fixedContentPos: false,
+				fixedBgPos: true,
+				overflowY: 'auto',
+				closeBtnInside: true,
+				preloader: false,
+				midClick: true,
+				removalDelay: 300,
+				mainClass: 'my-mfp-zoom-in'
+			});
+
+		});
+	</script>
+	<script>
+		var remainingSeconds = @ViewBag.RemainingTimeForConfirmCode;
+
+		function startCountdown() {
+			var countdownElement = document.getElementById("countdown");
+
+			var countdownInterval = setInterval(function () {
+				countdownElement.innerText = remainingSeconds + " saniyə ərzində təsdiq  kodunu daxil edin";
+
+				remainingSeconds--;
+
+				if (remainingSeconds < 0) {
+					clearInterval(countdownInterval);
+					countdownElement.innerText = "Vaxt doldu. Yeni təsdiq kodu almaq üçün istək göndərin";
+				}
+			}, 1000);
+		}
+
+		document.addEventListener("DOMContentLoaded", startCountdown);
+	</script>
+
+
+</body>
+<!-- //Body -->
+
+</html>

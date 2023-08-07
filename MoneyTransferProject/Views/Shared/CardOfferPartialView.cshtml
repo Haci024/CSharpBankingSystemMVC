@@ -1,0 +1,72 @@
+﻿@inject LanguageService  language
+@model MoneyTransferProject.ViewModels.HomeVM
+<section class="site-section bg-light" id="pricing-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-12 text-center" data-aos="fade-up">
+                <h2 class="section-title mb-3">@language.GetKey("Bank kartlarımız")</h2>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="">
+                <div class="pricing">
+                    <h3 class="text-center text-black">@language.GetKey("Adi")</h3>
+                    <div class="price text-center mb-4 ">
+                        <span><span>@language.GetKey("Pulsuz")</span> /@language.GetKey("2 il")</span>
+                    </div>
+                    <ul class="list-unstyled ul-check success mb-5">
+
+                        <li>@language.GetKey("Ölkə daxili pul köçürmələri rüsum tətbiq edilmir.")</li>
+                        <li class="remove">@language.GetKey("Ölkə xarici pul köçürmələri rüsum 50% endirilir.")</li>
+                        <li class="remove">@language.GetKey("2 qat ƏDV geri qayıdır")</li>
+                        <li class="remove">@language.GetKey(" daha çox cashback")</li>
+                        <li class="remove">@language.GetKey("Kredit götürən zaman 5% endirim.")</li>
+                    </ul>
+                    <p class="text-center">
+                        <a href="#" class="btn btn-secondary">@language.GetKey("Sifariş et!")</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 pricing-popular" data-aos="fade-up" data-aos-delay="100">
+                <div class="pricing">
+                    <h3 class="text-center text-black">@language.GetKey("Premium")</h3>
+                    <div class="price text-center mb-4 ">
+                        <span><span>@language.GetKey("10 AZN")</span> /@language.GetKey("3 il")</span>
+                    </div>
+                    <ul class="list-unstyled ul-check success mb-5">
+
+                        <li>@language.GetKey("Ölkə daxili pul köçürmələri rüsum tətbiq edilmir.")</li>
+                        <li>@language.GetKey("Ölkə xarici pul köçürmələri rüsum 50% endirilir.")</li>
+                        <li>@language.GetKey("2 qat ƏDV geri qayıdır")</li>
+                        <li class="remove">@language.GetKey(" daha çox cashback")</li>
+                        <li class="remove">@language.GetKey("Kredit götürən zaman 5% endirim.")</li>
+                    </ul>
+                    <p class="text-center">
+                        <a href="#" class="btn btn-secondary">@language.GetKey("Sifariş et!")</a>
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="pricing">
+                    <h3 class="text-center text-black">@language.GetKey("Platin")</h3>
+                    <div class="price text-center mb-4 ">
+                        <span><span>@language.GetKey("200 AZN")</span> /@language.GetKey("5 il")</span>
+                    </div>
+                    <ul class="list-unstyled ul-check success mb-5">
+
+                        <li>@language.GetKey("Ölkə daxili pul köçürmələri rüsum tətbiq edilmir.")</li>
+                        <li>@language.GetKey("Ölkə xarici pul köçürmələri rüsum 50% endirilir.")</li>
+                        <li>@language.GetKey("3 qat ƏDV geri qayıdır")</li>
+                        <li>@language.GetKey("15% daha çox cashback")</li>
+                        <li>@language.GetKey("Kredit götürən zaman 5% endirim.")</li>
+                    </ul>
+                    <p class="text-center">
+                        <a href="#" class="btn btn-secondary">@language.GetKey("Sifariş et!")</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

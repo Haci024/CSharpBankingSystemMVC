@@ -1,0 +1,95 @@
+﻿@model ConvertMoneyViewModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/CustomerLayout/Index.cshtml";
+  
+}
+<link href="~/gentela-gh-pages/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="~/gentela-gh-pages/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="~/gentela-gh-pages/vendors/nprogress/nprogress.css" rel="stylesheet">
+<link href="~/gentela-gh-pages/build/css/custom.min.css" rel="stylesheet">
+
+@*<div class="text-center">
+    <h1>Döviz Dönüştürme</h1>
+
+    @if (ViewBag.ConversionError != null)
+    {
+        <p>@ViewBag.ConversionError</p>
+    }
+    @using (Html.BeginForm("Valuta", "ValutaAndMetal", FormMethod.Post))
+    {
+        <label for="fromCurrency">Dönüştürülecek Para Birimi:</label>
+        @Html.DropDownListFor(model => model.FromCurrency, new SelectList(Model.CurrencyOptions), "-- Seçin --")
+        <br />
+
+        <label for="toCurrency">Hedef Para Birimi:</label>
+        @Html.DropDownListFor(model => model.ToCurrency, new SelectList(Model.CurrencyOptions), "-- Seçin --")
+        <br />
+        <label for="amount">Miktar:</label>
+        @Html.TextBoxFor(model => model.Amount)
+        <br />
+
+        <button type="submit">Çevir</button>
+        <div>@Model.ConvertedAmount</div>
+
+    }
+    *@
+@*<!-- Görünüm (View) dosyası -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // MoneyCurrency API'ye GET isteği gönder
+        $.get("https://currency-exchange.p.rapidapi.com/exchange?from=USD&to=AZN&q=1.0", function (data) {
+            // API'den dönen verileri işle
+            var currencies = data.currencies; // Örnek olarak, API'den dönen currencies dizisi
+
+            // Verileri kullanarak görünümde işlemler yap
+            // Örnek olarak, currencies dizisini bir seçenek listesine dönüştür
+            var selectOptions = "";
+            for (var i = 0; i < currencies.length; i++) {
+                selectOptions += "<option value='" + currencies[i].code + "'>" + currencies[i].name + "</option>";
+            }
+
+            // Oluşturulan seçenek listesini görünümdeki bir elemente ata
+            $("#currencySelect").html(selectOptions);
+        });
+    });
+</script>
+
+<!-- Örneğin, seçenek listesini içeren bir HTML elementi -->
+<select id="currencySelect"></select>
+
+
+
+@*</div>*@
+@*<!DOCTYPE html>
+<html>
+<head>
+    <title>API Sonucu Gösterme</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": "https://currency-exchange.p.rapidapi.com/exchange?from=USD&to=AZN&q=1.0",
+                "method": "GET",
+                "headers": {
+                    "x-rapidapi-host": "currency-exchange.p.rapidapi.com",
+                    "x-rapidapi-key": "RAPIDAPI_API_KEY"
+                }
+            };
+
+            $.ajax(settings).done(function (response) {
+                var result = response; // API'den dönen cevap
+                $("#conversionResult").text(result); // Sonucu görüntülemek için elementi güncelle
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>API Dönüşüm Sonucu</h1>
+    <div id="conversionResult"></div> <!-- Sonucu görüntülemek için bir <div> elementi -->
+</body>
+</html>
+*@

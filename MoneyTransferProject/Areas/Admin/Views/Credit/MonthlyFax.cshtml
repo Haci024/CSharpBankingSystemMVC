@@ -1,0 +1,218 @@
+﻿@model EntityLayer.Concrete.Credits
+@{
+    ViewData["Title"] = "AgreementAndFax";
+    Layout = "~/Areas/Admin/Views/CustomerLayout/Index.cshtml";
+
+}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+        </div>
+
+        <div class="clearfix"></div>
+        <form method="post">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+
+                            <ul class="nav navbar-right panel_toolbox">
+                                <li>
+                                    <a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                                    <ul class="dropdown-menu" role="menu"></ul>
+                                </li>
+
+                            </ul>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="x_content">
+                            <div class="text-center">
+                                <h3>Aylıq  Ödəniş</h3>
+                            </div>
+
+                            <section class="content invoice">
+                                <!-- title row -->
+                                <div class="row">
+                                    <div class="col-xs-12 invoice-header">
+                                        <h1>
+                                            <i class="fa fa-bank"></i>Odissey Bank
+                                            <small class="pull-right">Valyuta:@Model.CustomerAccount.Valutas.Currency</small>
+                                        </h1>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- info row -->
+                                <div class="row invoice-info">
+                                    <div class="col-sm-4 invoice-col">
+                                        Krediti veren
+                                        <address>
+                                            <strong>Orxan Aslan</strong>
+                                            <br>Vəzifə:CEO of OdisseyBanks
+                                            <br>Şəhər:Bakı
+                                            <br>Əlaqə nömrəsi:(+994)555515345
+                                            <br>Əlaqə: odisseybank024@gmail.com
+                                        </address>
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-sm-4 invoice-col">
+                                        Krediti alan
+                                        <address>
+                                            <strong>@Model.CustomerAccount.AppUser.Name @Model.CustomerAccount.AppUser.Surname</strong>
+                                            <br>Bank kartı:@Model.CustomerAccount.AccountNumber
+                                            <br>Şəhər:@Model.CustomerAccount.AppUser.City
+                                            <br>Əlaqə nömrəsi:@Model.CustomerAccount.AppUser.PhoneNumber
+                                            <br>Əlaqə: @Model.CustomerAccount.AppUser.Email
+                                        </address>
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-sm-4 invoice-col">
+                                        <b>Sənəd</b>
+                                        <br>
+                                        <br>
+                                        <b>Order ID:</b> 4F3S8J
+                                        <br>
+                                        <b>Tarix:</b> @((DateTime.Now).ToString("d"))
+                                        <br>
+                                        <b>İstifadəçi adı:@User.Identity.Name</b>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                                <!-- Table row -->
+                                <div class="row">
+                                    <div class="col-xs-12 table">
+                                        <table class="table table-striped">
+                                            <thead>
+
+                                                <tr>
+                                                   
+                                                    <th>Ödəmə tarixi</th>
+                                                    <th>Ödəniş məbləği</th>
+                                                    <th>Köçürülmə zamanı</th>
+                                                    <th>Köçürülən məbləğ</th>
+                                                    <th>Qalıq borc</th>
+                                                    <th>Kreditin miqdarı</th>
+                                                   
+
+                                                    <th></th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var item in Model.MonthlyPayment)
+                                                {
+                                                    if (ViewBag.Id == item.Id)
+                                                    {
+                                                        <tr>
+                                                            <td>@item.PaymentDate</td>
+                                                            <td>@item.Payment @Model.CustomerAccount.Valutas.Currency</td>
+                                                            <td>@item.ProcessDate</td>
+                                                            <td>@item.PayMoney @Model.CustomerAccount.Valutas.Currency</td>
+                                                            <td>@Model.CreditDetail.RemainingPayment</td>
+                                                            <td>@Model.TotalPayment @Model.CustomerAccount.Valutas.Currency</td>
+                                                        </tr>
+                                                    }
+                                                 
+                                                }
+                                                 
+                                                
+
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+
+                                <div class="row">
+                                    <!-- accepted payments column -->
+                                    <div class="col-xs-6">
+                                        <p class="lead">Payment Methods:</p>
+                                        <img src="~/gentela-gh-pages/production/images/visa.png" alt="Visa">
+                                        <img src="~/gentela-gh-pages/production/images/mastercard.png" alt="Mastercard">
+                                        <img src="~/gentela-gh-pages/production/images/american-express.png" alt="American Express">
+                                        <img src="~/gentela-gh-pages/production/images/paypal.png" alt="Paypal">
+                                        <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+                                            Bizi Seçdiyiniz üçün təşəkkürlər!Biz sizin üçün varıq.Hörmətlə:OdisseyBank
+                                        </p>
+                                    </div>
+                                    <!-- /.col -->
+                                    <div class="col-xs-6">
+                                       
+                                        <div class="table-responsive">
+                                            <table class="table">
+                                                <tbody>
+                                                    <tr>
+                                                        <th style="width:50%">Ümumi ödəniş:</th>
+                                                        <td>@Model.TotalPayment  @Model.CustomerAccount.Valutas.Currency</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Faiz:</th>
+                                                        <td>@Model.Percent %</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Köçürülən məbləğ</th>
+                                                        <td>@ViewBag.Payment  @Model.CustomerAccount.Valutas.Currency</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Aylıq ödəniş:</th>
+                                                        <td>@Model.CreditDetail.MonthlyPayment @Model.CustomerAccount.Valutas.Currency</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th>Kredit məbləği:</th>
+                                                        <td>@Model.CreditAmount  @Model.CustomerAccount.Valutas.Currency</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!-- /.col -->
+                                </div>
+                                <!-- /.row -->
+                             
+
+                                <br />
+                                <div class="row no-print">
+                                    <div class="col-xs-12">
+
+                                    
+                                        <a class="btn btn-success pull-right" asp-action="MonthlyPayment" asp-route-id="@Model.Id" style="margin-right: 5px;" id="submitButton" ><i class="fa fa-success">Geri</i></a>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <button class="btn btn-default" onclick="window.print();"><i class="fa fa-print"></i>Yüklə</button>
+        
+    </div>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        toggleSubmitButton();
+
+        document.getElementById("termsCheckbox").addEventListener("change", function () {
+            toggleSubmitButton();
+        });
+    });
+
+    function toggleSubmitButton() {
+        var checkbox = document.getElementById("termsCheckbox");
+        var submitButton = document.getElementById("submitButton");
+
+        submitButton.disabled = !checkbox.checked;
+    }
+</script>
+
+
+
+
+

@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="555 əlaqə nömrəsinə zəng etməklə bankımıza müraciət edə bilərsiniz!" xml:space="preserve">
+    <value>555 əlaqə nömrəsinə zəng etməklə bankımıza müraciət edə bilərsiniz!</value>
+  </data>
+  <data name="Ana Səhifə" xml:space="preserve">
+    <value>Ana Səhifə</value>
+  </data>
+  <data name="Ardını oxu..." xml:space="preserve">
+    <value>Ardını oxu...</value>
+  </data>
+  <data name="Artıq terminallardayıq.Terminaldan ödənişlər ilk 1 ay üçün pulsuz müəyyən edilib.Belə ki,aylıq 1000 manatı keçməmək şərtilə terminaldan həyata keçirilən əməliyyatlar üçün rüsum tutulmayacaq." xml:space="preserve">
+    <value>Artıq terminallardayıq!!!Terminaldan ödənişlər ilk 1 ay üçün pulsuz müəyyən edilib.Belə ki,aylıq 1000 manatı keçməmək şərtilə terminaldan həyata keçirilən əməliyyatlar üçün rüsum tutulmayacaq.</value>
+  </data>
+  <data name="Aylıq ödəniş" xml:space="preserve">
+    <value>Aylıq ödəniş</value>
+  </data>
+  <data name="Aze" xml:space="preserve">
+    <value>Aze</value>
+  </data>
+  <data name="AZN,TRL,EUR,USD kimi valyutalara məxsus kartlar bankımızda mövcuddur." xml:space="preserve">
+    <value>AZN,TRL,EUR,USD kimi valyutalara məxsus kartlar bankımızda mövcuddur.</value>
+  </data>
+  <data name="Bakı,Gəncə,Naxçıvan və SUmqayıt kimi böyük şəhərlərdə filiallarımız fəaliyyət göstərir." xml:space="preserve">
+    <value>Bakı,Gəncə,Naxçıvan və SUmqayıt kimi böyük şəhərlərdə filiallarımız fəaliyyət göstərir.</value>
+  </data>
+  <data name="Bank kartlarımız" xml:space="preserve">
+    <value>Bank kartlarımız</value>
+  </data>
+  <data name="Bank Problemləri" xml:space="preserve">
+    <value>Bank Problemləri</value>
+  </data>
+  <data name="Banka necə müraciət edə bilərəm?" xml:space="preserve">
+    <value>Banka necə müraciət edə bilərəm?</value>
+  </data>
+  <data name="Banka pul yatırımı etsəm aylıq nə qədər faiz artımı olar?" xml:space="preserve">
+    <value>Banka pul yatırımı etsəm aylıq nə qədər faiz artımı olar?</value>
+  </data>
+  <data name="Bankçılıq biznes üçün faydası var?" xml:space="preserve">
+    <value>Bankçılıq biznes üçün faydası var?</value>
+  </data>
+  <data name="Başqa valyuta kartı ilə kredit götürən zaman Başqa valyuta kartı ilə kredit götürən zaman kredit ödənişlərini başqa valyuta kartı ilə ödəyə bilərəm?" xml:space="preserve">
+    <value>Başqa valyuta kartı ilə kredit götürən zaman kredit ödənişlərini başqa valyuta kartı ilə ödəyə bilərəm?</value>
+  </data>
+  <data name="Bizimlə əlaqə" xml:space="preserve">
+    <value>Bizimlə əlaqə</value>
+  </data>
+  <data name="Biznes üçün kredit verirsinizmi?" xml:space="preserve">
+    <value>Biznes üçün kredit verirsinizmi?</value>
+  </data>
+  <data name="Bu sizin aylıq gəlirinizdən asılıdır.Gəliriniz nə qədər yüksək olarsa,ala biləcəyiniz kredit miqdarıda bir o qədər artır." xml:space="preserve">
+    <value>Bu sizin aylıq gəlirinizdən asılıdır.Gəliriniz nə qədər yüksək olarsa,ala biləcəyiniz kredit miqdarıda bir o qədər artır.</value>
+  </data>
+  <data name="Büdcə" xml:space="preserve">
+    <value>Büdcə</value>
+  </data>
+  <data name="Bəli veririk.Bu sizin aylıq gəlirinizə uyğun hesablanır.Maksimum İpoteka krediti 100 min manat təşkil edir." xml:space="preserve">
+    <value>Bəli veririk.Bu sizin aylıq gəlirinizə uyğun hesablanır.Maksimum İpoteka krediti 100 min manat təşkil edir.</value>
+  </data>
+  <data name="Bəli, mümkündür.Bunun üçün müəyyən miqdarda rüsum tətbiq ediləcək." xml:space="preserve">
+    <value>Bəli, mümkündür.Bunun üçün müəyyən miqdarda rüsum tətbiq ediləcək.</value>
+  </data>
+  <data name="Bəli, veririk.Sizə uyğun şərtlərlə istədiyiniz biznes kreditini əldə etməyiniz üçün əlimizdən gələni edirik." xml:space="preserve">
+    <value>Bəli, veririk.Sizə uyğun şərtlərlə istədiyiniz biznes kreditini əldə etməyiniz üçün əlimizdən gələni edirik.</value>
+  </data>
+  <data name="CV dəyərləndirməsi necə aparılır?" xml:space="preserve">
+    <value>CV dəyərləndirməsi necə aparılır?</value>
+  </data>
+  <data name="CV-lər yoxlanır.Qoyulan tələblərə uyğun olan namizədlər müsahibəyə çağırılır." xml:space="preserve">
+    <value>CV-lər yoxlanır.Qoyulan tələblərə uyğun olan namizədlər müsahibəyə çağırılır.</value>
+  </data>
+  <data name="Digər valyutalar ilə kredit götürmək mümkündürmü?" xml:space="preserve">
+    <value>Digər valyutalar ilə kredit götürmək mümkündürmü?</value>
+  </data>
+  <data name="Dil" xml:space="preserve">
+    <value>Dil</value>
+  </data>
+  <data name="Eng" xml:space="preserve">
+    <value>Eng</value>
+  </data>
+  <data name="faiz" xml:space="preserve">
+    <value>faiz</value>
+  </data>
+  <data name="Filiallarınız harada yerləşir?" xml:space="preserve">
+    <value>Filiallarınız harada yerləşir?</value>
+  </data>
+  <data name="Finans Problemləri" xml:space="preserve">
+    <value>Finans Problemləri</value>
+  </data>
+  <data name="Gəlirlər" xml:space="preserve">
+    <value>Gəlirlər</value>
+  </data>
+  <data name="Hansı saatlarda fəaliyyət göstərirsiniz?" xml:space="preserve">
+    <value>Hansı saatlarda fəaliyyət göstərirsiniz?</value>
+  </data>
+  <data name="Hansı valyuta tipinə uyğun kartlarınız var?" xml:space="preserve">
+    <value>Hansı valyuta tipinə uyğun kartlarınız var?</value>
+  </data>
+  <data name="Haqqımızda" xml:space="preserve">
+    <value>Haqqımızda</value>
+  </data>
+  <data name="Haqqında" xml:space="preserve">
+    <value>Haqqında</value>
+  </data>
+  <data name="Hesab açmaq" xml:space="preserve">
+    <value>Hesab açmaq</value>
+  </data>
+  <data name="Həftə içi 9:00 dan 18:00 qədər filiallarımıza yaxınlaşa və ya qaynar xəttimizə zəng edə bilərsiniz" xml:space="preserve">
+    <value>Həftə içi 9:00 dan 18:00 qədər filiallarımıza yaxınlaşa və ya qaynar xəttimizə zəng edə bilərsiniz</value>
+  </data>
+  <data name="il" xml:space="preserve">
+    <value>il</value>
+  </data>
+  <data name="Ipoteka krediti verirsinizmi?" xml:space="preserve">
+    <value>Ipoteka krediti verirsinizmi?</value>
+  </data>
+  <data name="Kart sifarişi" xml:space="preserve">
+    <value>Kart sifarişi</value>
+  </data>
+  <data name="Komandamız" xml:space="preserve">
+    <value>Komandamız</value>
+  </data>
+  <data name="Kredit faizi" xml:space="preserve">
+    <value>Kredit faizi</value>
+  </data>
+  <data name="Kredit Kalkulyatoru" xml:space="preserve">
+    <value>Kredit Kalkulyatoru</value>
+  </data>
+  <data name="Kredit müddəti" xml:space="preserve">
+    <value>Kredit müddəti</value>
+  </data>
+  <data name="Kredit məbləği" xml:space="preserve">
+    <value>Kredit məbləği</value>
+  </data>
+  <data name="Kredit şərtləri kreditin növünə,müddətinə və faizinə görə dəyişir." xml:space="preserve">
+    <value>Kredit şərtləri kreditin növünə,müddətinə və faizinə görə dəyişir.</value>
+  </data>
+  <data name="Kredit şərtləri necədir?" xml:space="preserve">
+    <value>Kredit şərtləri necədir?</value>
+  </data>
+  <data name="Maaşları Ödə" xml:space="preserve">
+    <value>Maaşları Ödə</value>
+  </data>
+  <data name="Maksimum kredit miqdarı nə qədərdir?" xml:space="preserve">
+    <value>Maksimum kredit miqdarı nə qədərdir?</value>
+  </data>
+  <data name="Minimum kredit miqdarı 500 AZN təşkil edir" xml:space="preserve">
+    <value>Minimum kredit miqdarı 500 AZN təşkil edir</value>
+  </data>
+  <data name="Minimum kredit miqdarı nə qədərdir?" xml:space="preserve">
+    <value>Minimum kredit miqdarı nə qədərdir?</value>
+  </data>
+  <data name="Profilim" xml:space="preserve">
+    <value>Profilim</value>
+  </data>
+  <data name="Qalereya" xml:space="preserve">
+    <value>Qalereya</value>
+  </data>
+  <data name="Qaynar xətlə necə əlaqə saxlaya bilərəm?" xml:space="preserve">
+    <value>Qaynar xətlə necə əlaqə saxlaya bilərəm?</value>
+  </data>
+  <data name="Rus" xml:space="preserve">
+    <value>Rus</value>
+  </data>
+  <data name="Servislər" xml:space="preserve">
+    <value>Servislər</value>
+  </data>
+  <data name="Sizdən gələn rəylər" xml:space="preserve">
+    <value>Sizdən gələn rəylər</value>
+  </data>
+  <data name="Son xəbərlər" xml:space="preserve">
+    <value>Son xəbərlər</value>
+  </data>
+  <data name="Sən haralısan?" xml:space="preserve">
+    <value>Sən haralısan?</value>
+  </data>
+  <data name="Vəzifələr" xml:space="preserve">
+    <value>Vəzifələr</value>
+  </data>
+  <data name="Xəbərlər" xml:space="preserve">
+    <value>Xəbərlər</value>
+  </data>
+  <data name="Xərclər" xml:space="preserve">
+    <value>Xərclər</value>
+  </data>
+  <data name="Yarat" xml:space="preserve">
+    <value>Yarat</value>
+  </data>
+  <data name="Yenilə" xml:space="preserve">
+    <value>Yenilə</value>
+  </data>
+  <data name="Ödənilən maaşlar" xml:space="preserve">
+    <value>Ödənilən maaşlar</value>
+  </data>
+  <data name="Ölkə daxili pul köçürmələri rüsum tətbiq edilmir" xml:space="preserve">
+    <value>Ölkə daxili pul köçürmələri rüsum tətbiq edilmir</value>
+  </data>
+  <data name="Ümumi ödəniş" xml:space="preserve">
+    <value>Ümumi ödəniş</value>
+  </data>
+  <data name="İstifadəçilər" xml:space="preserve">
+    <value>İstifadəçilər</value>
+  </data>
+  <data name="İşçilər" xml:space="preserve">
+    <value>İşçilər</value>
+  </data>
+  <data name="Şifrəni unutdun?" xml:space="preserve">
+    <value>Şifrəni unutdun?</value>
+  </data>
+  <data name="Əlaqə nömrəmiz və ya elektron ünvanımıza mesaj yazmaqla bizimlə əlaqə saxlaya bilərsiniz" xml:space="preserve">
+    <value>Əlaqə nömrəmiz və ya elektron ünvanımıza mesaj yazmaqla bizimlə əlaqə saxlaya bilərsiniz</value>
+  </data>
+  <data name="Əlavə ödəniş" xml:space="preserve">
+    <value>Əlavə ödəniş</value>
+  </data>
+  <data name="Əlbəttə mümkündür.Bunun üçün həmin valyutaya uyğun kartınızın olması kifayət edir." xml:space="preserve">
+    <value>Əlbəttə mümkündür.Bunun üçün həmin valyutaya uyğun kartınızın olması kifayət edir.</value>
+  </data>
+  <data name="“OdisseyBank” KB ASC 2023-cü ilin ikinci rübü üzrə əsas maliyyə göstəricilərini açıqlayıb. Ötəni ilin uyğun dövrü ilə müqayisədə bankın xalis mənfəəti kəskin artıb, aktivlərin həcmi milyard yarımı keçib, kredit portfeli üzrə rekord göstərici əldə olunub. 30 iyun 2023-cü il tarixinə Bankın əməliyyat mənfəəti ötən ilin uyğun dövrü ilə müqayisədə 20 milyon artaraq 28 milyon manatı keçib. Cəmi gəlirlər ötən ilin müvafiq dövrü ilə müqayisədə 49 % artaraq, 148 milyon manat olub. Bankın xalis mənfəəti 2022-ci ilin eyni dövrü ilə müqayisədə 12 dəfə artıb. Bununla da OdisseyBank bu ilin birinci yarısını 9.2 milyon manat xalis mənfəətlə başa vurub." xml:space="preserve">
+    <value>“OdisseyBank” KB ASC 2023-cü ilin ikinci rübü üzrə əsas maliyyə göstəricilərini açıqlayıb. Ötəni ilin uyğun dövrü ilə müqayisədə bankın xalis mənfəəti kəskin artıb, aktivlərin həcmi milyard yarımı keçib, kredit portfeli üzrə rekord göstərici əldə olunub. 30 iyun 2023-cü il tarixinə Bankın əməliyyat mənfəəti ötən ilin uyğun dövrü ilə müqayisədə 20 milyon artaraq 28 milyon manatı keçib. Cəmi gəlirlər ötən ilin müvafiq dövrü ilə müqayisədə 49 % artaraq, 148 milyon manat olub. Bankın xalis mənfəəti 2022-ci ilin eyni dövrü ilə müqayisədə 12 dəfə artıb. Bununla da OdisseyBank bu ilin birinci yarısını 9.2 milyon manat xalis mənfəətlə başa vurub.</value>
+  </data>
+</root>

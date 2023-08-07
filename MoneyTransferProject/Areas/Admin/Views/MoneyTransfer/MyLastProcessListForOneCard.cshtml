@@ -1,0 +1,92 @@
+﻿@model IEnumerable<EntityLayer.Concrete.CustomerActionProcess>
+@{
+    ViewData["Title"] = "MyLastProcessListForOneCard";
+    Layout = "~/Areas/Admin/Views/CustomerLayout/Index.cshtml";
+}
+
+<link href="~/gentela-gh-pages/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<link href="~/gentela-gh-pages/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+<link href="~/gentela-gh-pages/vendors/nprogress/nprogress.css" rel="stylesheet">
+
+<link href="~/gentela-gh-pages/build/css/custom.min.css" rel="stylesheet">
+<div class="right_col" role="main">
+    <div class="">
+        <div class="page-title">
+            <div class="title_left">
+                <h3>Money Transfer  İstifadəçi Paneli</h3>
+            </div>
+
+            <div class="title_right">
+                <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">Axtar...</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+
+                    <div class="x_content">
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="x_panel">
+                                <div class="x_title">
+                                    <h2>Son əməliyyatlarım</h2>
+                                    <ul class="nav navbar-right panel_toolbox">
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                </div>
+
+
+                                <table id="datatable-buttons" class="table table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Əməliyyatın zamanı</th>
+                                            <th>Əməliyyat tipi</th>
+                                            <th>Göndərən</th>
+                                            <th>Göndərən Kart nömrəsi</th>      
+                                            <th>Göndərilən məbləğ</th>
+                                            <th>Rüsum</th>
+                                            <th>Alıcı</th>
+                                            <th>Alıcı kart nömrəsi</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            if (item.SendAction.Valutas.Currency ==ViewBag.Valuta)
+                                            {
+                                                <tr>
+                                                    <td>@item.ProcessDate.ToString("dd.MM.yyyy HH:mm")</td>
+                                                    <td>@item.ProcessType</td>
+                                                    <td>@item.SendAction.AppUser.Name @item.SendAction.AppUser.Surname</td>
+                                                    <td>@item.SendAction.AccountNumber</td>                     
+                                                    <td>@item.Amount @item.SendAction.Valutas.Currency</td>
+                                                    <td>@item.fees @item.SendAction.Valutas.Currency</td>
+                                                    <td>@item.ReceiveAction.AppUser.Name @item.ReceiveAction.AppUser.Surname</td>
+                                                    <td>@item.ReceiveAction.AccountNumber</td>
+                                                </tr>
+                                            }
+                                          
+                                        }
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

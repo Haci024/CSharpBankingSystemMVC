@@ -1,0 +1,41 @@
+﻿@model HomeVM
+@{
+    ViewData["Title"] = "Home Page";
+}
+@inject LanguageService  language
+<!--Slider section-->
+@await Html.PartialAsync("SliderPartialView",Model)
+
+<!--About Us-->
+
+
+@await Html.PartialAsync("AboutUsPartialView", Model)
+<!--Card offers-->
+<!--Our team-->
+
+@await Html.PartialAsync("OurTeamPartialView")
+<!--Galery images-->
+@await Html.PartialAsync("GalleryPartialView")
+
+<!--How it  Works-->
+@await Html.PartialAsync("HowItWorks")
+
+<!--Our Services section-->
+@await Html.PartialAsync("OurServicesPartialView",Model)
+<!--Customer Reaction section-->
+@await Html.PartialAsync("CustomerReactionPartialView",Model)
+<!--Card offers section-->
+@await Html.PartialAsync("CardOfferPartialView",Model)
+
+<!--Frequently Ask Questions section-->
+
+@await Html.PartialAsync("FrequentlyQuestionPartialView",Model)
+<!--Blogs section-->
+@await Html.PartialAsync("OurBlogPartialview",Model)
+
+<!--Contact Us-->
+
+@await Html.PartialAsync("ContactUsPartialView",Model)
+
+
+

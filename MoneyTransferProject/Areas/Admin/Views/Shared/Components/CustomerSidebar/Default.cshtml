@@ -1,0 +1,133 @@
+﻿@model IEnumerable<EntityLayer.Concrete.CustomerAccount>
+@{
+
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+<div class="col-md-3 left_col">
+    <div class="left_col scroll-view">
+        <div class="navbar nav_title" style="border: 0;">
+            <a asp-controller="MyAccount" asp-action="Update" class="site_title"><i class="fa fa-paw"></i> <span>Money Transfer</span></a>
+        </div>
+
+        <div class="clearfix"></div>
+
+        <!-- menu profile quick info -->
+        <div class="profile clearfix">
+            <div class="profile_pic">
+                <img src="~/gentela-gh-pages/production/images/img.jpg" alt="..." class="img-circle profile_img">
+            </div>
+            <div class="profile_info">
+                <span>Xoş Gəldiniz,</span>
+                <h2>@User.Identity.Name</h2>
+            </div>
+        </div>
+        <!-- /menu profile quick info -->
+
+        <br />
+
+        <!-- sidebar menu -->
+        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+                <h3>Menyular</h3>
+                <ul class="nav side-menu">
+                    <li>
+                        <a><i class="fa fa-home"></i> Ana səhifə <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a asp-controller="Dashboard" asp-action="Index">Əsas səhifə</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-credit-card"></i> Hesablarım <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a asp-controller="MyAccount" asp-action="AllCards">Bütün Hesablarım</a></li>
+                           
+                            <li><a href="typography.html">Müddətli hesablarım</a></li>
+                            <li><a href="icons.html">Müddətsiz hesablarım</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-table"></i> Hesab əməliyyatları <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a asp-controller="MoneyTransfer" asp-action="SendMoneyWithAnyCards"><i class="fa fa-hand-holding-dollar"></i>Pul göndər</a></li>
+                            <li><a asp-controller="MoneyTransfer" asp-action="MyLastProcess"><i class="fa fa-clipboard-list"></i>Son fəaliyyətlər</a></li>
+                            <li><a asp-controller="MoneyTransfer" asp-action="MineCards">Öz hesablarım arasında pul göndərmək</a></li>
+                            <li><a asp-controller="CardProcess" asp-action="BuyNewCards"><i class="fa fa-tachograph-digital"></i>Kart sifariş et</a></li>
+                        </ul>
+                    </li>
+               
+                    <li>
+                        <a><i class="fa fa-gg-circle"></i>Valyuta ilə köçürmə <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                                @foreach (var item in Model)
+                                {
+                                    @if (item.AppUser.UserName==User.Identity.Name)
+                                {
+                                    if (item.Valutas.Currency == "AZN")
+                                    {
+                                        <li> <a asp-controller="MoneyTransfer" asp-action="SendMoney" asp-route-valuta="@item.Valutas.Currency"><i class="fa fa-manat-sign"></i> @item.Valutas.Currency Transfer</a> </li>
+                                    }
+                                    else if (item.Valutas.Currency == "TRL")
+                                    {
+                                        <li> <a asp-controller="MoneyTransfer" asp-action="SendMoney" asp-route-valuta="@item.Valutas.Currency"><i class="fa fa-turkish-lira"></i> @item.Valutas.Currency Transfer</a> </li>
+                                    }
+                                    else if (item.Valutas.Currency == "USD")
+                                    {
+                                        <li> <a asp-controller="MoneyTransfer" asp-action="SendMoney" asp-route-valuta="@item.Valutas.Currency"><i class="fa fa-dollar"></i> @item.Valutas.Currency Transfer</a> </li>
+                                    }
+                                    else
+                                    {
+                                        <li> <a asp-controller="MoneyTransfer" asp-action="SendMoney" asp-route-valuta="@item.Valutas.Currency"><i class="fa fa-eur"></i> @item.Valutas.Currency Transfer</a> </li>
+                                    }
+                                }
+                            
+
+                                  }
+                            <li><a asp-controller="MoneyTransfer" asp-action="SendMoney" asp-route-valuta="Other">Digər Valyutalar</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                    <a><i class="fa fa-vault"></i> Kassa <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                         
+                            <li><a href="tables_dynamic.html">ödənişlər</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-user"></i> İstifadəçi məlumatları <span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a asp-controller="MyAccount" asp-action="Update"><i class="fa fa-circle-info"></i>Məlumatlar</a></li>
+                            <li><a asp-controller="MyAccount" asp-action="UpdatePassword"><i class="fa fa-key"></i>Şifrə dəyiş</a></li>
+                       @*     <li><a href="tables_dynamic.html">Nəqliyyat  ödənişləri</a></li>
+                            <li><a href="tables_dynamic.html">Təhsil  ödənişləri</a></li>
+                            <li><a href="tables_dynamic.html"> Sığorta  ödənişləri</a></li>
+                            <li><a href="tables_dynamic.html">Diğer  ödənişləri</a></li>*@
+                        </ul>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-bar-chart-o"></i> Valyuta ve Metallar<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a asp-controller="ValutaAndMetal" asp-action="Valuta"><i class="fa fa-money-bill-transfer"></i> Valyuta çevirmə</a></li>
+                          
+                            <li><a href="morisjs.html"><i class="fa fa-bitcoin"></i>Metal məzənnələri</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a><i class="fa fa-money"></i>Kredit<span class="fa fa-chevron-down"></span></a>
+                        <ul class="nav child_menu">
+                            <li><a asp-controller="Credit" asp-action="GetCredit"><i class="fa fa-money-check-dollar"></i>Kredit götürmək</a></li>
+                            <li><a asp-controller="Credit" asp-action="MyCredits"><i class="fa fa-piggy-bank"></i>Kreditlərim</a></li>
+                            <li><a asp-controller="Credit" asp-action="Calculator"><i class="fa fa-cash-register"></i>Kredit kalkulyatoru</a></li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+</div>
+ 

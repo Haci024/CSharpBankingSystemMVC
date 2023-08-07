@@ -1,0 +1,22 @@
+﻿@model MoneyTransferProject.ViewModels.HomeVM
+@inject LanguageService language
+<section class="site-section bg-light" id="pricing-section">
+    <div class="container">
+        <div class="row site-section" id="faq-section">
+            <div class="col-12 text-center" data-aos="fade">
+                <h2 class="section-title">@language.GetKey("Tez-tez verilən suallar")</h2>
+            </div>
+        </div>
+        <div class="row">
+            @foreach (var item in Model.FrequentlyQuestions)
+            {
+                <div class="col-lg-6">
+                    <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <h3 class="text-black h4 mb-4">@language.GetKey(item.Question)</h3>
+                        <p>@language.GetKey(item.Answer)</p>
+                    </div>
+                </div>
+            }
+            </div>
+    </div>
+</section>

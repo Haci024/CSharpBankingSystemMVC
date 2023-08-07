@@ -1,0 +1,35 @@
+﻿@inject LanguageService  language
+@model MoneyTransferProject.ViewModels.HomeVM
+<div class="site-blocks-cover overlay" style="background-image: url(images/@Model.SliderImage.Image);" data-aos="fade" id="home-section">
+
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+
+
+            <div class="col-md-10 mt-lg-5 text-center">
+                <div class="single-text owl-carousel">
+                    @foreach (var item in Model.SLiders)
+                    {
+                        <div class="slide">
+                            <h1 class="text-uppercase" data-aos="fade-up">@language.GetKey(item.Title)</h1>
+                            <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100">@language.GetKey(item.Subtitle)</p>
+                            <div data-aos="fade-up" data-aos-delay="100">
+                                <a href="#" target="_blank" class="btn  btn-primary mr-2 mb-2">Get</a>
+                            </div>
+                        </div>
+                    }
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <a href="#next" class="mouse smoothscroll">
+        <span class="mouse-icon">
+            <span class="mouse-wheel"></span>
+        </span>
+    </a>
+</div>
