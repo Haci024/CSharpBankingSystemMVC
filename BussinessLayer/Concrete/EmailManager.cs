@@ -42,7 +42,7 @@ namespace BussinessLayer.Concrete
             using (var client1 = new MailKit.Net.Smtp.SmtpClient())
             {
                 client1.Connect("smtp.gmail.com", 587, false);
-                client1.Authenticate("odisseybanks024@gmail.com", "voxryimidhytyjot");
+                client1.Authenticate("odisseybanks024@gmail.com", "");
                 client1.Send(mimeMessage);
                 client1.Disconnect(true);
             }
@@ -69,7 +69,7 @@ namespace BussinessLayer.Concrete
             using (var client1 = new MailKit.Net.Smtp.SmtpClient())
             {
                 client1.Connect("smtp.gmail.com", 587, false);
-                client1.Authenticate("odisseybanks024@gmail.com", "voxryimidhytyjot");
+                client1.Authenticate("odisseybanks024@gmail.com", "");
                 client1.Send(mimeMessage1);
                 client1.Disconnect(true);
             }
@@ -99,7 +99,7 @@ namespace BussinessLayer.Concrete
             using (var client1 = new MailKit.Net.Smtp.SmtpClient())
             {
                 client1.Connect("smtp.gmail.com", 587, false);
-                client1.Authenticate("odisseybanks024@gmail.com", "voxryimidhytyjot");
+                client1.Authenticate("odisseybanks024@gmail.com", "");
                 client1.Send(mimeMessage1);
                 client1.Disconnect(true);
             }
@@ -125,7 +125,7 @@ namespace BussinessLayer.Concrete
             using (var client1 = new MailKit.Net.Smtp.SmtpClient())
             {
                 client1.Connect("smtp.gmail.com", 587, false);
-                client1.Authenticate("odisseybanks024@gmail.com", "voxryimidhytyjot");
+                client1.Authenticate("odisseybanks024@gmail.com", "");
                 client1.Send(mimeMessage1);
                 client1.Disconnect(true);
             }
@@ -158,7 +158,7 @@ namespace BussinessLayer.Concrete
             using (var client1 = new MailKit.Net.Smtp.SmtpClient())
             {
                 client1.Connect("smtp.gmail.com", 587, false);
-                client1.Authenticate("odisseybanks024@gmail.com", "voxryimidhytyjot");
+                client1.Authenticate("odisseybanks024@gmail.com", "");
                 client1.Send(mimeMessage1);
                 client1.Disconnect(true);
             }
@@ -189,7 +189,7 @@ namespace BussinessLayer.Concrete
             using (var client1 = new MailKit.Net.Smtp.SmtpClient())
             {
                 client1.Connect("smtp.gmail.com", 587, false);
-                client1.Authenticate("odisseybanks024@gmail.com", "voxryimidhytyjot");
+                client1.Authenticate("odisseybanks024@gmail.com", "");
                 client1.Send(mimeMessage1);
                 client1.Disconnect(true);
             }
@@ -222,7 +222,7 @@ namespace BussinessLayer.Concrete
             using (var client1 = new MailKit.Net.Smtp.SmtpClient())
             {
                 client1.Connect("smtp.gmail.com", 587, false);
-                client1.Authenticate("odisseybanks024@gmail.com", "voxryimidhytyjot");
+                client1.Authenticate("odisseybanks024@gmail.com", "");
                 client1.Send(mimeMessage);
                 client1.Disconnect(true);
             }
@@ -252,7 +252,7 @@ namespace BussinessLayer.Concrete
             using (var client1 = new MailKit.Net.Smtp.SmtpClient())
             {
                 client1.Connect("smtp.gmail.com", 587, false);
-                client1.Authenticate("odisseybanks024@gmail.com", "voxryimidhytyjot");
+                client1.Authenticate("odisseybanks024@gmail.com", "");
                 client1.Send(mimeMessage);
                 client1.Disconnect(true);
             }
